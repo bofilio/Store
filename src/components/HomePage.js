@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Menu, Breadcrumb, Space, Divider } from 'antd';
 import { UploadOutlined, VideoCameraOutlined, SearchOutlined, CrownFilled, ShoppingCartOutlined, UnorderedListOutlined } from '@ant-design/icons';
 import MyCarousel from './common/MyCarousel';
 import Category from './common/Category';
@@ -40,7 +40,7 @@ class HomePage extends React.Component {
                         <Menu.Item key="3">Notifications</Menu.Item>
                         <Menu.Item key="4">Wishlist</Menu.Item>
                         <Menu.Item key="5">Cart</Menu.Item>
-                        <SubMenu key="h_sub1"title='More'>
+                        <SubMenu key="h_sub1" title='More'>
                             <Menu.Item key="6">Settings</Menu.Item>
                             <Menu.Item key="7">Instructions</Menu.Item>
                             <Menu.Item key="8">About</Menu.Item>
@@ -53,30 +53,30 @@ class HomePage extends React.Component {
                             <img src="store.png" width="50" alt="" />
                             <h5>Store</h5>
                         </div>
-                        <Menu theme="light" mode="inline" style={{fontSize:'11px'}} defaultSelectedKeys={[]}>
-                            <Menu.Item key="1" style={{margin:0}} icon={<ShoppingCartOutlined />}>
+                        <Menu theme="light" mode="inline" style={{ fontSize: '11px' }} defaultSelectedKeys={[]}>
+                            <Menu.Item key="1" style={{ margin: 0 }} icon={<ShoppingCartOutlined />}>
                                 <i style={{ marginLeft: '20px' }}>Cart</i> <i style={{ float: 'right', color: 'grey' }}>2</i>
                             </Menu.Item>
-                            <Menu.Item key="2" style={{margin:0}} icon={<VideoCameraOutlined />}>
+                            <Menu.Item key="2" style={{ margin: 0 }} icon={<VideoCameraOutlined />}>
                                 <i style={{ marginLeft: '20px' }}>Wishlist</i> <i style={{ float: 'right', color: 'grey' }}>2</i>
                             </Menu.Item>
-                            <Menu.Item key="3" style={{margin:0}} icon={<UploadOutlined />}>
+                            <Menu.Item key="3" style={{ margin: 0 }} icon={<UploadOutlined />}>
                                 <i style={{ marginLeft: '20px' }}>Orders</i> <i style={{ float: 'right', color: 'grey' }}>2</i>
                             </Menu.Item>
-                            <Menu.Item key="4" style={{margin:0}} icon={<UploadOutlined />}>
+                            <Menu.Item key="4" style={{ margin: 0 }} icon={<UploadOutlined />}>
                                 <i style={{ marginLeft: '20px' }}>News</i> <i style={{ float: 'right', color: 'grey' }}>2</i>
                             </Menu.Item>
-                            <Menu.Item key="5" style={{margin:0}} icon={<UploadOutlined />}>
+                            <Menu.Item key="5" style={{ margin: 0 }} icon={<UploadOutlined />}>
                                 <i style={{ marginLeft: '20px' }}>Notifications</i> <i style={{ float: 'right', color: 'grey' }}>2</i>
                             </Menu.Item>
                             <Menu.Divider />
-                            <Menu.Item key="6" style={{margin:0}} icon={<UploadOutlined />}>
+                            <Menu.Item key="6" style={{ margin: 0 }} icon={<UploadOutlined />}>
                                 <i style={{ marginLeft: '20px' }}>Instructions</i>
                             </Menu.Item>
-                            <Menu.Item key="7" style={{margin:0}} icon={<UploadOutlined />}>
+                            <Menu.Item key="7" style={{ margin: 0 }} icon={<UploadOutlined />}>
                                 <i style={{ marginLeft: '20px' }}>Settings</i>
                             </Menu.Item>
-                            <Menu.Item key="8" style={{margin:0}} icon={<UploadOutlined />}>
+                            <Menu.Item key="8" style={{ margin: 0 }} icon={<UploadOutlined />}>
                                 <i style={{ marginLeft: '20px' }}>About</i>
                             </Menu.Item>
 
@@ -84,16 +84,64 @@ class HomePage extends React.Component {
                         </Menu>
                     </Sider>
 
-                    <Layout style={{ padding: '0 5px 5px',marginTop:'60px' }} onClick={this.toggleOff}>
+                    <Layout style={{ padding: '10px', marginTop: '60px' }} onClick={this.toggleOff}>
                         <Breadcrumb className="hide-small" style={{ margin: '16px 0' }}>
                             <Breadcrumb.Item>Home</Breadcrumb.Item>
                             <Breadcrumb.Item>List</Breadcrumb.Item>
                             <Breadcrumb.Item>App</Breadcrumb.Item>
                         </Breadcrumb>
-                        <Content className="site-layout-background" style={{paddingTop:'16px',margin: 0,}}>
-                           <span style={{fontSize:'12px'}}>What's New</span>
+                        <Content style={{ paddingTop: '16px', margin: 0, }}>
+                            <span style={{ fontSize: '11px' }}>What's New</span>
                             <MyCarousel></MyCarousel>
-                            <Category></Category>
+                            <Category 
+                                name='Fashion'
+                                icon='shirt.png'
+                                description="The numbers in the table specify the first browser version that fully"
+                                color="#e28743"
+                                spacing='2px'
+                                >
+                            </Category>
+                            <Category
+                                name='Phones'
+                                icon='phone.png'
+                                description="The numbers in the table specify the first browser version that fully"
+                                color="#fc43d5"
+                                spacing='2px'
+                                >
+                            </Category>
+                            <Category 
+                                name='Fashion'
+                                icon='shirt.png'
+                                description="The numbers in the table specify the first browser version that fully"
+                                color="#e28743"
+                                spacing='2px'
+                                >
+                            </Category>
+                            <Category
+                                name='Phones'
+                                icon='phone.png'
+                                description="The numbers in the table specify the first browser version that fully"
+                                color="#fc43d5"
+                                spacing='2px'
+                                >
+                            </Category>
+                            <Category
+                                name='Phones'
+                                icon='phone.png'
+                                description="The numbers in the table specify the first browser version that fully"
+                                color="#fc43d5"
+                                spacing='2px'
+                                >
+                            </Category>
+                            <Category 
+                                name='Fashion'
+                                icon='shirt.png'
+                                description="The numbers in the table specify the first browser version that fully"
+                                color="#e28743"
+                                spacing='2px'
+                                >
+                            </Category>
+
                         </Content>
                     </Layout>
                 </Layout>

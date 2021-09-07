@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Carousel } from 'antd';
 export default class MyCarousel extends Component {
     style = {
-        height: '160px',
+        height: '130px',
         color: '#fff',
         lineHeight: '160px',
         textAlign: 'center',

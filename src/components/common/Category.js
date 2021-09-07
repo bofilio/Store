@@ -1,16 +1,22 @@
 import React, { Component } from 'react'
-import { Card,Row, Col } from 'antd'
-import { ShoppingOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
+import { Card, Space } from 'antd'
 export default class Category extends Component {
     render() {
         return (
-            <Card bodyStyle={{padding:0,}}>
-                <Row align="middle">
-                    <Col flex="64px" style={{}}><ShoppingOutlined style={{ padding:'8px',fontSize: "32px", color: "white", backgroundColor: "#73AD21" }} /></Col>
-                    <Col flex="auto">Fill Rest</Col>
-                </Row>
+            <Link to={'category?cat='+this.props.name} >
+            <Card hoverable bodyStyle={{ padding: 0, }} style={{marginBottom:this.props.spacing}}>
+                <Space  direction='horizontal' style={{ maxHeight: '48px', overflow: 'hidden' }}>
+                    <div flex="48px" style={{ padding: '8px',backgroundColor: this.props.color}}>
+                        <img src={this.props.icon} alt="" width="32px"/>
+                    </div>
+                    <div flex="auto" style={{padding:'2px',maxHeight:'48px',lineHeight: '100%'}}>
+                        <strong style={{fontSize:'9px',margin:0}}>{this.props.name}</strong>
+                        <p style={{fontSize:'8px',margin:0,lineHeight: '100%'}}>{this.props.description} </p>
+                    </div>
+                </Space>
             </Card>
-
+            </Link>
         )
     }
 }
