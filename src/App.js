@@ -9,10 +9,8 @@ import Page404 from './pages/Page404';
 function App() {
   return (
     <SideBarProvider>
-
       <CoverProvider>
         <Cover />
-     
       <Router>
         <Switch>
           <Route path="/" exact component={HomePage} />
