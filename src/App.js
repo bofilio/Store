@@ -5,6 +5,7 @@ import { SideBarProvider } from './components/SideBarContext';
 import Cover from './components/Cover';
 import { CoverProvider } from './components/CoverContext';
 import CategoryPage from './pages/CategoryPage';
+import Page404 from './pages/Page404';
 function App() {
   return (
     <SideBarProvider>
@@ -15,7 +16,10 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/category/:cat" exact component={CategoryPage} />
+          <Route path="/category/:name" exact component={CategoryPage} />
+          <Route path="*">
+            <Page404/>
+          </Route>
         </Switch>
       </Router> 
       </CoverProvider>

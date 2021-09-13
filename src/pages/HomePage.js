@@ -3,7 +3,6 @@ import { Layout } from 'antd';
 import MyCarousel from '../components/MyCarousel';
 import NavBar from '../components/NanBar';
 import SideBar from '../components/SideBar';
-import { SideBarContext } from '../components/SideBarContext';
 import CategoryList from '../components/CategoryList';
 const { Content } = Layout;
 

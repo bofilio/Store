@@ -1,7 +1,6 @@
 import React,{useContext} from 'react'
 import Radium from 'radium';
 import { Layout,Menu } from 'antd'
-import { UploadOutlined, VideoCameraOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 import { SideBarContext } from './SideBarContext';
 import { Link } from 'react-router-dom';
 import MyColors from '../util/colors';
@@ -46,37 +45,37 @@ const SideBar = () => {
                         <Menu theme="light" mode="inline" style={styles.menu} >
 
                             <Menu.Item href='/wish' key="1" style={styles.menu_item}>
-                                <Link to='/cart' key='11' style={styles.menu_item_link} ><i style={styles.menu_item_icon} className="fas fa-angle-up"></i>Cart</Link> <i style={styles.menu_item_badge}>2</i>
+                                <Link to='/cart' key='11' style={styles.menu_item_link} ><i style={styles.menu_item_icon} className="fa fa-angle-up"></i>Cart</Link> <i style={styles.menu_item_badge}>2</i>
                             </Menu.Item>
 
                             <Menu.Item key="2" style={styles.menu_item}>
-                                <Link to="/wishlist" key="21" style={styles.menu_item_link}><i style={styles.menu_item_icon} className="fas fa-angle-up"></i>Wishlist</Link> <i style={styles.menu_item_badge}>2</i>
+                                <Link to="/wishlist" key="21" style={styles.menu_item_link}><i style={styles.menu_item_icon} className="fa fa-angle-up"></i>Wishlist</Link> <i style={styles.menu_item_badge}>2</i>
                             </Menu.Item>
 
                             <Menu.Item key="3" style={styles.menu_item}>
-                                <Link to="/orders" key="31" style={styles.menu_item_link}><i style={styles.menu_item_icon} className="fas fa-angle-up"></i>Orders</Link> <i style={styles.menu_item_badge}>2</i>
+                                <Link to="/orders" key="31" style={styles.menu_item_link}><i style={styles.menu_item_icon} className="fa fa-angle-up"></i>Orders</Link> <i style={styles.menu_item_badge}>2</i>
                             </Menu.Item>
                             
                             <Menu.Item key="4" style={styles.menu_item}>
-                                <Link to="/news" key="41" style={styles.menu_item_link}><i style={styles.menu_item_icon} className="fas fa-angle-up"></i>News</Link> <i style={styles.menu_item_badge}>2</i>
+                                <Link to="/news" key="41" style={styles.menu_item_link}><i style={styles.menu_item_icon} className="fa fa-angle-up"></i>News</Link> <i style={styles.menu_item_badge}>2</i>
                             </Menu.Item>
 
                             <Menu.Item key="5" style={styles.menu_item}>
-                                <Link  to="/notifications" key="51" style={styles.menu_item_link}><i style={styles.menu_item_icon} className="fas fa-angle-up"></i>Notifications</Link> <i style={styles.menu_item_badge}>2</i>
+                                <Link  to="/notifications" key="51" style={styles.menu_item_link}><i style={styles.menu_item_icon} className="fa fa-angle-up"></i>Notifications</Link> <i style={styles.menu_item_badge}>2</i>
                             </Menu.Item>
 
                             <Menu.Divider />
 
                             <Menu.Item key="6" style={styles.menu_item}>
-                                <Link to="instuctions" key="61" style={styles.menu_item_link}><i style={styles.menu_item_icon} className="fas fa-angle-up"></i>Instructions</Link> <i style={styles.menu_item_badge}>2</i>
+                                <Link to="instuctions" key="61" style={styles.menu_item_link}><i style={styles.menu_item_icon} className="fa fa-angle-up"></i>Instructions</Link> <i style={styles.menu_item_badge}>2</i>
                             </Menu.Item>
 
                             <Menu.Item key="7" style={styles.menu_item}>
-                                <Link to="settings" key="71" style={styles.menu_item_link}><i style={styles.menu_item_icon} className="fas fa-angle-up"></i>Settings</Link> <i style={styles.menu_item_badge}>2</i>
+                                <Link to="settings" key="71" style={styles.menu_item_link}><i style={styles.menu_item_icon} className="fa fa-angle-up"></i>Settings</Link> <i style={styles.menu_item_badge}>2</i>
                             </Menu.Item>
 
                             <Menu.Item key="8" style={styles.menu_item}>
-                                <Link key="81" to="about" style={styles.menu_item_link}><i style={styles.menu_item_icon} className="fas fa-angle-up"></i>About</Link> <i style={styles.menu_item_badge}>2</i>
+                                <Link key="81" to="about" style={styles.menu_item_link}><i style={styles.menu_item_icon} className="fa fa-angle-up"></i>About</Link> <i style={styles.menu_item_badge}>2</i>
                             </Menu.Item>
 
                         </Menu>
