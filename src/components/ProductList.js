@@ -24,7 +24,7 @@ const ProductList = ({ color }) => {
                     {
                         products.map(prod => (
 
-                            <Product key={prod.id} price_color={color} image={prod.image} title={prod.title} price={prod.price} />
+                            <Product key={prod.id} id={prod.id} price_color={color} image={prod.image} title={prod.title} price={prod.price} />
 
                         ))
                     }

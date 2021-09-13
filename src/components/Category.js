@@ -5,7 +5,7 @@ import { Card, Space } from 'antd'
 
 const Category = (props) => {
     return (
-        <Link to={'category/'+props.name} >
+        <Link to={'category/'+props.name+'/'} >
         <Card hoverable bodyStyle={{ padding: 0, }} style={{borderRadius:'4px',marginBottom:props.spacing}}>
             <Space  direction='horizontal' style={{ maxHeight: '48px', overflow: 'hidden' }}>
                 <div flex="48px" style={{ padding: '8px',backgroundColor: props.color,borderRadius:'4px 0px 0px 4px'}}>

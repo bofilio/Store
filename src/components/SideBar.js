@@ -23,9 +23,9 @@ const SideBar = () => {
         },
         menu_item_link:{
             color:MyColors.color1,
-            ":hover":{
-                color:MyColors.color2,
-            }
+            ':hover':{
+                color:MyColors.color2
+            },
         },
         menu_item_icon:{
             marginRight:'20px',

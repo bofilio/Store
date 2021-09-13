@@ -21,7 +21,7 @@ const CategoryPage = () => {
                 </div>
                 <div className="w3-rest w3-margin ">
                     <h6 className='w3-text-white' style={{margin:0}}>{category.name}</h6>
-                    <p className="w3-text-white" style={{fontSize:'10px',margin:0,lineHeight: '110%'}}>{category.description}</p>
+                    <p className="w3-text-white" style={{fontSize:'12px',margin:0,lineHeight: '110%'}}>{category.description}</p>
                 </div>
 
             </div>

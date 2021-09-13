@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Layout } from 'antd';
 import MyCarousel from '../components/MyCarousel';
-import NavBar from '../components/NanBar';
+import NavBar from '../components/NavBar';
 import SideBar from '../components/SideBar';
 import CategoryList from '../components/CategoryList';
 const { Content } = Layout;
