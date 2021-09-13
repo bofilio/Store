@@ -31,15 +31,18 @@ export default class FakeDatabase {
 
     static products=[
         {
+            id:1,
             image:'/woman.png',
             title:'Woman style',
             price:'45000$'
         },
         {
+            id:2,
             image:'/woman.png',
             title:'Men style',
             price:'4000$'
         },
+        
     ]
 
     static getCategoryByID=(id)=>{

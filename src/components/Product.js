@@ -1,16 +1,31 @@
 import React from 'react'
-import { Card } from 'antd';
-const { Meta } = Card;
-
+import Radium from 'radium';
+const styles = {
+    container: {
+        flexBasis: '120px',
+        margin: '8px', 
+        flexGrow:1,
+        '@media (min-width: 480px)': {
+            flexGrow:0,
+            flexBasis: '180px',
+          }
+    },  
+}
 
 const Product = (props) => {
     return (
-        <div style={{width:'150px', margin:'4px'}}>
-            <Card hoverable style={{ width: '100%' }} cover={<img alt="dress" src={props.image} />}>
-                <Meta title={props.price} description={props.title} />
-            </Card>
+        
+        <div style={styles.container}>
+            <div className="w3-card-4"  cover={<img alt="dress" />}>
+            <img src={props.image}  alt="prod" style={{width:'100%', height:'150px',maxHeight:'150px',
+        overflowY:'hidden'}}/>
+                <div className="w3-container" style={{ height:'52px',maxHeight:'52px',overflowY:'hidden'}}>
+                    <h6 style={{color:props.price_color,margin:0,textAlign:'center'}}>{props.price}</h6>
+                    <p style={{margin:0,textAlign:'center'}}>{props.title}</p>
+                </div>
+            </div>
         </div>
     )
 }
 
-export default Product
+export default Radium(Product)

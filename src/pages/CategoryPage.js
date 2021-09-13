@@ -2,15 +2,16 @@ import React from 'react'
 import { useParams } from 'react-router'
 import FakeDatabase from '../data/data';
 import ProductList from '../components/ProductList';
+import BackButton from '../components/common/BackButton';
 const CategoryPage = () => {
     let {name} = useParams();
     let category= FakeDatabase.getCategoryByName(name);
     
     return (
-        <div>
+        <div style={{height:'100%'}}>
         <div className="w3-block w3-padding-left" style={{height:'120px', backgroundColor:category.color}}>
             <div className="w3-bar" style={{padding:0,fontSize:"16px"}}>
-                <div className="w3-bar-item"><i className="fa fa-arrow-left w3-class w3-text-white" ></i></div>
+                <div className="w3-bar-item"><BackButton/></div>
                 <div className="w3-bar-item w3-right"><i className="fa fa-cart-arrow-down w3-text-white"></i></div>
                 <div className="w3-bar-item w3-right" ><i className="fa fa-sort-amount-desc w3-text-white"></i></div>
             </div>
@@ -25,7 +26,7 @@ const CategoryPage = () => {
 
             </div>
         </div>
-        <ProductList/>
+        <ProductList color={category.color}/>
         </div>
     )
 }
