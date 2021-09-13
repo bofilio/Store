@@ -14,8 +14,7 @@ const HomePage = () => {
                 <NavBar />
                 <Layout style={{ height: '100%' }}>
                     <SideBar />
-
-                    <Layout style={{ padding: '10px', marginTop: '60px' }}>
+                    <Layout style={{ padding: '10px', marginTop: '60px',backgroundColor:'#E7EBF6'}}>
                         <Content style={{ paddingTop: '16px', margin: 0, }}>
                             <span style={{ fontSize: '11px' }}>What's New</span>
                             <MyCarousel></MyCarousel>

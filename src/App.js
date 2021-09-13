@@ -8,10 +8,8 @@ import CategoryPage from './pages/CategoryPage';
 function App() {
   return (
     <SideBarProvider>
-
       <CoverProvider>
         <Cover />
-     
       <Router>
         <Switch>
           <Route path="/" exact component={HomePage} />
