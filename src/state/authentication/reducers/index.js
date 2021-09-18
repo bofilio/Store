@@ -1,10 +1,11 @@
-import userEvent from "@testing-library/user-event";
 import { combineReducers } from "redux";
-import { UserReducer,TokenReducer } from "./authReducers";
+import { UserReducer,TokenReducer,LoggedInReducer,LoadingReducer } from "./reducers";
 
 const reducers=combineReducers({
     token:TokenReducer,
     currentUser:UserReducer,
+    logged_in:LoggedInReducer,
+    loading:LoadingReducer,
 })
 
 
