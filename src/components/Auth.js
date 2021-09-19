@@ -2,7 +2,7 @@
 import React, {useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import {authActionCreators} from '../state/authentication/action-creators';
+import {authActionCreators} from '../state/authentication/action-creators/index';
 import '../App.css';
 import firebase from 'firebase/app';
 import 'firebase/auth'
@@ -11,10 +11,8 @@ import Todo from './Todo';
 function Auth() {
     //--------------------------------Redux 
     //-------------states
-    const token = useSelector(state => state.token);
-    const currentUser = useSelector(state => state.currentUser);
-    const logged_in = useSelector(state => state.logged_in);
-    const loading = useSelector(state => state.loading);
+    const {token,currentUser,logged_in,loading}=useSelector(state=> state.auth);
+
     //--------------actions
     const dispatch = useDispatch();
     const { updateUser, updateToken, toggleLoggedIn, toggleLoading } = bindActionCreators(authActionCreators, dispatch);
@@ -29,7 +27,7 @@ function Auth() {
     const change_passwordRef = useRef();
     //----------------------------------------------------helper functions
     const userIsLogged=()=>{
-        return (logged_in & (window.localStorage.getItem("user_is_logged")==="yes"));
+        return (logged_in || (window.localStorage.getItem("user_is_logged")==="yes"));
     }
 
    

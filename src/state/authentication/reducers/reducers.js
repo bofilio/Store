@@ -15,7 +15,7 @@ export const UserReducer= (state=null,action) => {
             return state;
     }
 }
-export const LoggedInReducer= (state=null,action) => {
+export const LoggedInReducer= (state=false,action) => {
     switch(action.type){
         case "toggle_logged_in":
             return action.payload;
@@ -23,7 +23,7 @@ export const LoggedInReducer= (state=null,action) => {
             return state;
     }
 }
-export const LoadingReducer= (state=null,action) => {
+export const LoadingReducer= (state=false,action) => {
     switch(action.type){
         case "toggle_loading":
             return action.payload;

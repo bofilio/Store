@@ -1,12 +1,17 @@
 
 import React from 'react'
 import Auth from './Auth'
-import SignIn from './AuthBox/Signin'
-import SignUp from './AuthBox/SignUp'
+import Signup from './AuthBox/SignUp'
+import { useSelector } from 'react-redux'
+import TemporaryDrawer from './NavBox/Drawer'
+import NavBare from './NavBox/NavBar'
+import Home from './Pages/Home'
 const App = () => {
+
+ 
   return (
-    <div>
-      <SignIn></SignIn>
+    <div style={{height:"100%"}}>
+    <Home/>
     </div>
   )
 }

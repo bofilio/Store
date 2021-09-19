@@ -1,5 +1,6 @@
 import { createStore,applyMiddleware } from "redux";
-import reducers from "./authentication/reducers";
+import reducers from "./index";
+
 import thunk from "redux-thunk";
 const store=createStore(
     reducers,
