@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux';
 import { navActionCreators } from '../../state/navigation/action-creators';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
@@ -17,10 +16,23 @@ export default function TemporaryDrawer() {
     const opened = useSelector(state => state.nav.opened)
     const dispatch=useDispatch();
     const {toggleDrawer}=bindActionCreators(navActionCreators,dispatch);
-    
+    const styles={
+        logobox:{
+            height:180,
+            width:"100%",
+            display:'flex',
+            alignItems:'center',
+            justifyContent:'center',
+            backgroundColor:'#EBC999'
+        }
+    }
 
     const list = () => (
-        <Box sx={{ width: 300 }} role="presentation" onClick={()=>toggleDrawer( false)} onKeyDown={()=>toggleDrawer(false)} >
+        <Box sx={{ width: 260}} role="presentation" onClick={()=>toggleDrawer( false)} onKeyDown={()=>toggleDrawer(false)} >
+            <Box sx={styles.logobox}>
+                logo
+            </Box>
+            
             <List>
                 {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
                     <ListItem button key={text}>

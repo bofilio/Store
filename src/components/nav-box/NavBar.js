@@ -62,9 +62,9 @@ export default function NavBare() {
     const { toggleDrawer } = bindActionCreators(navActionCreators, dispatch);
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
-                <Toolbar>
+        <Box sx={{ flexGrow: 1 }} >
+            <AppBar position="static" sx={{backgroundColor:"#CD7700"}}>
+                <Toolbar >
                     <IconButton size="large" edge="start" color="inherit" aria-label="open drawer" sx={{ mr: 1 }} onClick={()=>toggleDrawer(true)}>
                         <MenuIcon />
                     </IconButton>
