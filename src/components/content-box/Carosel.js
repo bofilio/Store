@@ -12,19 +12,19 @@ const Carosel = () => {
         width: 'auto'
     }
     return (
-        <Box p={1}>
+        <Box >
             <Card>
                 <CardMedia>
                     <Carousel showArrows={true} stopOnHover showThumbs={false} autoPlay interval={2000} emulateTouch infiniteLoop statusFormatter={() => { }}>
                         <div>
-                            <img src="static/imgs/logo.png" alt="img1" style={img_style} />
+                            <img src="/static/imgs/logo.png" alt="img1" style={img_style} />
                         </div>
                         <div>
-                            <img src="static/imgs/logo.png" alt="img1" style={img_style} />
+                            <img src="/static/imgs/logo.png" alt="img1" style={img_style} />
 
                         </div>
                         <div>
-                            <img src="static/imgs/logo.png" alt="img1" style={img_style} />
+                            <img src="/static/imgs/logo.png" alt="img1" style={img_style} />
 
                         </div>
                     </Carousel>
