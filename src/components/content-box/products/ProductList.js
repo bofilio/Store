@@ -1,17 +1,29 @@
+import React, { useState, useEffect } from 'react'
 import { Box } from '@mui/system'
-import React from 'react'
+import CircularProgress from '@mui/material/CircularProgress';
 import Product from './Product'
 
-const ProductList = () => {
+import { fetchProductsListByCategory } from '../../../firebase/apis/product'
+import { useFetchCollection } from '../../../hooks/useFetch'
+const ProductList = ({ category_name }) => {
+    const filter = [{ collection: 'category', doc_id: category_name, key: 'category', operator: '==' }]
+    const { data: products, isPending, error } = useFetchCollection('products', filter,500)
+    const convertToDateString=(timestemp)=>{
+        return new Date(timestemp.seconds*1000).toLocaleDateString();
+    }
     return (
-        <Box sx={{display:'flex', flexWrap:'wrap'}}>
-            <Product key="1"/>
-            <Product key="2"/>
-            <Product key="3"/>
-            <Product key="4"/>
-            <Product key="5"/>
-            <Product key="6"/>
-        </Box>
+        isPending ?
+            <Box sx={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <CircularProgress />
+            </Box>
+            :
+            <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+                {
+                    products && products.map(prod => (
+                        <Product key={prod.id} id={prod.id}/>
+                    ))
+                }
+            </Box>
     )
 }
 

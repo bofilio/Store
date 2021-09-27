@@ -19,7 +19,7 @@ const ProductCard = styled(Card)(({ theme }) => ({
         maxWidth: '100%',
     },
 }));
-const ProductBox = styled(Box)(({ them }) => ({
+const ProductBox = styled(Box)(({ theme }) => ({
     display: 'flex',
     flexDirection: 'row',
     '@media (min-width:392px)': {
@@ -27,13 +27,13 @@ const ProductBox = styled(Box)(({ them }) => ({
     },
 }));
 
-const Product = () => {
+const Product = ({id}) => {
     return (
-        <Link to="category/details" style={{textDecoration:'none'}}>
+        <Link to={id} style={{textDecoration:'none'}}>
             <ProductCard sx={{ m: 1 }}>
                 <ProductBox>
                     <CardMedia sx={{ maxHeight: 180, justifyContent: 'center', display: 'flex' }}>
-                        <img src="static/imgs/jean.jpg" style={{ height: "auto", width: "100%" }} />
+                        <img src="/static/imgs/jean.jpg" style={{ height: "auto", width: "100%" }} />
                     </CardMedia>
                     <Box sx={{ p: 1 }}>
                         <Box sx={{ maxHeight: '100px', overflowY: 'hidden' }}>

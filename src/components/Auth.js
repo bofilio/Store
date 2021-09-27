@@ -4,10 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {authActionCreators} from '../state/authentication/action-creators/index';
 import '../App.css';
-import firebase from 'firebase/app';
-import 'firebase/auth'
 import Todo from './Todo';
-
+import { auth,google_provider,facebook_provider}from '../firebase/firebaseConfig'
 function Auth() {
     //--------------------------------Redux 
     //-------------states
@@ -35,7 +33,7 @@ function Auth() {
     useEffect(() => {
         //this will be called each time user state change (its a listner to user state)
         //this will returne a function (let name it unsubscribe) we use it to destroy event listner when unmount
-        const unsbscribe = firebase.auth().onAuthStateChanged(async user => {
+        const unsbscribe = auth.onAuthStateChanged(async user => {
             if (user) {
                 //when sign in 
                 updateUser(user)
@@ -62,8 +60,7 @@ function Auth() {
     const googleSignin = async () => {
         toggleLoading(true);
         try {
-            const google_provider = new firebase.auth.GoogleAuthProvider();
-            const userCredantial = await firebase.auth().signInWithPopup(google_provider);
+            const userCredantial = await auth.signInWithPopup(google_provider);
             //do somthing with userCredantial.user
         } catch (err) {
             console.log(err);
@@ -74,8 +71,7 @@ function Auth() {
     const facebookSignin = async () => {
         toggleLoading(true);
         try {
-            const facebook_provider = new firebase.auth.FacebookAuthProvider();
-            const userCredantial = await firebase.auth().signInWithPopup(facebook_provider);
+            const userCredantial = await auth.signInWithPopup(facebook_provider);
             //do somthing with userCredantial.user
         } catch (err) {
             console.log(err);
@@ -89,7 +85,7 @@ function Auth() {
         try {
             const signin_email = signin_emailRef.current.value;
             const signin_password = signin_passwordRef.current.value;
-            const userCredantial = await firebase.auth().signInWithEmailAndPassword(signin_email, signin_password);
+            const userCredantial = await auth.signInWithEmailAndPassword(signin_email, signin_password);
             //do somthing with userCredantial.user
         } catch (err) {
             console.log(err);
@@ -103,7 +99,7 @@ function Auth() {
         try {
             const signup_email = signup_emailRef.current.value;
             const signup_password = signup_passwordRef.current.value;
-            const userCredantial = await firebase.auth().createUserWithEmailAndPassword(signup_email, signup_password);
+            const userCredantial = await auth.createUserWithEmailAndPassword(signup_email, signup_password);
             //do somthing with userCredantial.user
         } catch (err) {
             console.log(err);
@@ -117,7 +113,7 @@ function Auth() {
         try {
             const reset_email = reset_emailRef.current.value;
             console.log(reset_email + "$$$$$$$$$$$$$$$");
-            await firebase.auth().sendPasswordResetEmail(reset_email);
+            await auth.sendPasswordResetEmail(reset_email);
         } catch (err) {
             console.log(err)
         }
@@ -147,7 +143,7 @@ function Auth() {
     //------------------------------------------signout
     const signOut = async () => {
         try {
-            await firebase.auth().signOut();
+            await auth.signOut();
         } catch (err) {
             console.log(err);
         }

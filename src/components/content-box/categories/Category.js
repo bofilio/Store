@@ -5,22 +5,21 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 
-export default function MultiActionAreaCard() {
+export default function Category({category}) {
     return (
-        <Link to="/category" style={{ textDecoration: 'none' }}>
+        <Link to= {'/category/'+category.name+"/"}  style={{ textDecoration: 'none' }}>
             <Card sx={{ display: "flex" }}>
-                <div style={{ padding: "10px", maxHeight: "84px", backgroundColor: 'green' }}>
-                    <CardMedia component="img" height="auto" sx={{ maxWidth: 64 }} image="/static/imgs/logo.png" alt="green iguana" />
+                <div style={{ padding: "10px", maxHeight: "84px", backgroundColor: category.color }}>
+                    <CardMedia component="img" height="auto" sx={{ maxWidth: 64 }} image={category.icon} alt="green iguana" />
                 </div>
                 <Box pl={1} pr={1}>
                     <Typography gutterBottom variant="h6" component="div" sx={{ m: 0, fontSize: "16px" }}>
-                        Lizard
+                        {category.name}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                        Lizards are a widespread group of squamate reptiles.
+                        {category.brief}
                     </Typography>
                 </Box>
-
             </Card>
         </Link>
 
