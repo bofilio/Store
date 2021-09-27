@@ -10,7 +10,7 @@ const CategoriesList = () => {
     const { data: categories, isPending, error } = useFetchCollection('category')
     return (
         isPending ?
-            <Box sx={{ display: 'flex',alignItems:'center',justifyContent:'center'}}>
+            <Box sx={{minHeight:"200px" ,display: 'flex',alignItems:'center',justifyContent:'center'}}>
                 <CircularProgress />
             </Box>
             :

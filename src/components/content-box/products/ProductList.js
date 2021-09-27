@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from 'react'
 import { Box } from '@mui/system'
 import CircularProgress from '@mui/material/CircularProgress';
 import Product from './Product'
-
-import { fetchProductsListByCategory } from '../../../firebase/apis/product'
 import { useFetchCollection } from '../../../hooks/useFetch'
 const ProductList = ({ category_name }) => {
     const filter = [{ collection: 'category', doc_id: category_name, key: 'category', operator: '==' }]
@@ -11,14 +8,14 @@ const ProductList = ({ category_name }) => {
     
     return (
         isPending ?
-            <Box sx={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <Box sx={{ height: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <CircularProgress />
             </Box>
             :
             <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
                 {
-                    products && products.map(prod => (
-                        <Product key={prod.id} id={prod.id}/>
+                    products && products.map(product => (
+                        <Product key={product.id} product={product}/>
                     ))
                 }
             </Box>

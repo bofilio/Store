@@ -6,27 +6,25 @@ import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardActions from '@mui/material/CardActions';
 import { Button } from '@mui/material';
-const Carosel = () => {
+import { Link } from 'react-router-dom';
+const NewsCarosel = ({ news }) => {
     const img_style = {
         height: '200px',
-        width: 'auto'
+        minHeight:'200px',
+        width: 'auto',
     }
     return (
-        <Box >
+        <Box sx={{minHeight:"200px"}}>
             <Card>
                 <CardMedia>
                     <Carousel showArrows={true} stopOnHover showThumbs={false} autoPlay interval={2000} emulateTouch infiniteLoop statusFormatter={() => { }}>
-                        <div>
-                            <img src="/static/imgs/logo.png" alt="img1" style={img_style} />
-                        </div>
-                        <div>
-                            <img src="/static/imgs/logo.png" alt="img1" style={img_style} />
-
-                        </div>
-                        <div>
-                            <img src="/static/imgs/logo.png" alt="img1" style={img_style} />
-
-                        </div>
+                        {
+                            news.map((n, index) => (
+                                <Link key={index} to={"news/" + n.id}>
+                                    <img  src={n.image} alt="news img" style={img_style} />
+                                </Link>
+                            ))
+                        }
                     </Carousel>
                 </CardMedia>
                 <CardActions>
@@ -34,8 +32,7 @@ const Carosel = () => {
                 </CardActions>
             </Card>
         </Box>
-
     );
 }
 
-export default Carosel
+export default NewsCarosel

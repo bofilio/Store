@@ -1,17 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ShareIcon from '@mui/icons-material/Share';
-import { CardActionArea, CardActions } from '@mui/material';
 import { IconButton } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { Box } from '@mui/system';
-
+import { CardActions } from '@mui/material';
 const ProductCard = styled(Card)(({ theme }) => ({
     maxWidth: 180,
     // Override media queries injected by theme.mixins.toolbar
@@ -27,21 +25,21 @@ const ProductBox = styled(Box)(({ theme }) => ({
     },
 }));
 
-const Product = ({id}) => {
+const Product = ({product}) => {
     return (
-        <Link to={id} style={{textDecoration:'none'}}>
+        <Link to={product.id} style={{textDecoration:'none'}}>
             <ProductCard sx={{ m: 1 }}>
-                <ProductBox>
-                    <CardMedia sx={{ maxHeight: 180, justifyContent: 'center', display: 'flex' }}>
-                        <img src="/static/imgs/jean.jpg" style={{ height: "auto", width: "100%" }} />
+                <ProductBox sx={{}}>
+                    <CardMedia sx={{ maxHeight: 180,flexGrow:1, justifyContent: 'center', display: 'flex' }}>
+                        <img src={product.images && product.images[0]} style={{ height: "auto", width: "100%" }} />
                     </CardMedia>
-                    <Box sx={{ p: 1 }}>
+                    <Box sx={{ p: 1 , flexGrow:3}} >
                         <Box sx={{ maxHeight: '100px', overflowY: 'hidden' }}>
                             <Typography gutterBottom variant="h6" noWrap component="div">
-                                73.56 USD
+                                {product.price}
                             </Typography>
                             <Typography variant="body2" component="div" color="text.secondary">
-                                Lizards are a widespread group of squamate Lizards are a w of squamate Lizards are a widespread group of squamate
+                                {product.description}
                             </Typography>
                         </Box>
                         <CardActions sx={{ p: 0 }}>

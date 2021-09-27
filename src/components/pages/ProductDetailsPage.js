@@ -11,12 +11,10 @@ import BookmarkIcon from '@mui/icons-material/Bookmark';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Typography } from '@mui/material';
 import Divider from '@mui/material/Divider';
-import Carosel from '../content-box/Carosel';
+import ProductCarosel from '../content-box/products/ProductCarosel'
 import Badge from '@mui/material/Badge';
 import { useParams } from 'react-router';
 import CircularProgress from '@mui/material/CircularProgress';
-import { fetchProductById } from '../../firebase/apis/product';
-import { getDefaultCurrency } from '../../firebase/apis/currency';
 import { useFetchDocument } from '../../hooks/useFetch';
 
 const ProductDetailsPage = () => {
@@ -60,7 +58,7 @@ const ProductDetailsPage = () => {
 
             </AppBar>
             <Box>
-                <Carosel />
+                <ProductCarosel images={product.images}/>
                 <Box sx={{ p: 1 }}>
                     <Box sx={{ display: 'flex', alignItems: 'center' }}>
                         <Typography variant="h6" mb={0} noWrap component="div">

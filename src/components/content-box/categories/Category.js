@@ -9,8 +9,8 @@ export default function Category({category}) {
     return (
         <Link to= {'/category/'+category.name+"/"}  style={{ textDecoration: 'none' }}>
             <Card sx={{ display: "flex" }}>
-                <div style={{ padding: "10px", maxHeight: "84px", backgroundColor: category.color }}>
-                    <CardMedia component="img" height="auto" sx={{ maxWidth: 64 }} image={category.icon} alt="green iguana" />
+                <div style={{ padding: "10px", Height: "64px",minHeight: "64px", backgroundColor: category.color }}>
+                    <CardMedia component="img" height="auto" sx={{ maxWidth: 64,minWidth:64 }} image={category.icon} alt="green iguana" />
                 </div>
                 <Box pl={1} pr={1}>
                     <Typography gutterBottom variant="h6" component="div" sx={{ m: 0, fontSize: "16px" }}>
