@@ -8,9 +8,7 @@ import { useFetchCollection } from '../../../hooks/useFetch'
 const ProductList = ({ category_name }) => {
     const filter = [{ collection: 'category', doc_id: category_name, key: 'category', operator: '==' }]
     const { data: products, isPending, error } = useFetchCollection('products', filter,500)
-    const convertToDateString=(timestemp)=>{
-        return new Date(timestemp.seconds*1000).toLocaleDateString();
-    }
+    
     return (
         isPending ?
             <Box sx={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
