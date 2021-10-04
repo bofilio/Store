@@ -15,7 +15,7 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import SettingsIcon from '@mui/icons-material/Settings';
 import MailIcon from '@mui/icons-material/Mail';
 import { Link } from 'react-router-dom';
-
+import BookmarkIcon from '@mui/icons-material/Bookmark';
 
 export default function TemporaryDrawer() {
     const opened = useSelector(state => state.nav.opened)
@@ -38,6 +38,12 @@ export default function TemporaryDrawer() {
             label: "Settings",
             icon: <SettingsIcon />,
             url: '/settings',
+        },
+        {
+            key: 1,
+            label: "Wishlist",
+            icon: <BookmarkIcon />,
+            url: '/wishlist',
         },
     ];
     const botttom_menu = [

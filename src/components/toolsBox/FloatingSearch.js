@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Fab from '@mui/material/Fab';
 import SearchIcon from '@mui/icons-material/Search';
+import { Link } from 'react-router-dom';
 const FloatingSearch = () => {
     const [animationclass, setAnimationclass] = useState("")
 
@@ -24,7 +25,7 @@ const FloatingSearch = () => {
     }, [])
    
     return (
-        <>
+        <Link to="/search" style={{textDecoration:"none"}}>
             {
                 animationclass?
                     <div className={animationclass}  style={{ position: 'fixed', bottom: 30, right: 20 }} >
@@ -36,7 +37,7 @@ const FloatingSearch = () => {
                     <></>
 
             }
-        </>
+        </Link>
     )
 }
 

@@ -28,7 +28,7 @@ const NewsCarosel = ({ news }) => {
                     </Carousel>
                 </CardMedia>
                 <CardActions>
-                    <Button size="small">go to details for farther details..</Button>
+                    <Button size="small" sx={{fontSize:"10px"}}>go to details for farther details..</Button>
                 </CardActions>
             </Card>
         </Box>
