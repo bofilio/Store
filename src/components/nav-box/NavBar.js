@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { navActionCreators } from '../../state/navigation/action-creators';
+import { navActionCreators } from '../../state/ui/action-creators';
 
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';

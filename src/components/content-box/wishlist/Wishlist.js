@@ -7,9 +7,9 @@ const Wishlist = () => {
     const item = { image: "/static/imgs/jean.jpg", name: "Test Item", price: '34500 $' }
     return (
         <Stack sx={{ display: "flex", flexDirection: 'column',p:0.5}}  spacing={0.5}>
-            <WishListItem item={item} />
-            <WishListItem item={item} />
-            <WishListItem item={item} />
+            <WishListItem item={item} key={1}/>
+            <WishListItem item={item} key={2}/>
+            <WishListItem item={item} key={3}/>
         </Stack>
     )
 }

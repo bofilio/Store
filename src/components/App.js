@@ -10,6 +10,8 @@ import NewsDetailsPage from './pages/NewsDetailsPage';
 import CartPage from './pages/CartPage';
 import WishlistPage from './pages/WishlistPage';
 import SearchPage from './pages/SearchPage';
+import NotificationPage from './pages/NotificationPage';
+import InstructionsPage from './pages/InstructionsPage';
 const App = () => {
 
   return (
@@ -20,6 +22,8 @@ const App = () => {
           <Route  path="/wishlist" exact component={WishlistPage}/>
           <Route path='/search' exact component={SearchPage}/>
           <Route path="/cart" exact component={CartPage}/>
+          <Route path="/notifications" exact component={NotificationPage}/>
+          <Route path="/guid" exact component ={InstructionsPage}/>
           <Route path="/settings" exact component={SettingsPage}/>
           <Route path="/news/:id" exact component={NewsDetailsPage}/>
           <Route path="/category/:category_name/" exact component={CategoryPage}/>

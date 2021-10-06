@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 import auth_reducers from './authentication/reducers'
-import nav_reducers from './navigation/reducers'
+import nav_reducers from './ui/reducers'
 import settings_reducers from './settings/reducers'
 
 const reducers=combineReducers({

@@ -39,7 +39,7 @@ export default function CartItem({ item }) {
         }
     }
     return (
-        <a href="#" style={{ textDecoration: 'none' }} >
+        <div style={{cursor:"pointer"}}>
             <Card sx={{ display: "flex", alignItems: "flex-start" }} onClick={handleClickOpen}>
                 <div style={{ flexBasis: "48px", flexShrink: 0 }}>
                     <CardMedia component="img" sx={{ maxWidth: 48, width: 48, height: 48 }} image={item.image} alt="item img" />
@@ -83,7 +83,7 @@ export default function CartItem({ item }) {
             </Dialog>
 
 
-        </a>
+        </div>
 
     );
 
