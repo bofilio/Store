@@ -35,7 +35,7 @@ const WishlistPage = () => {
                     <IconButton size="large" aria-label="search" color="inherit" onClick={() => toggleDeleteDialog(true)}>
                         <DeleteIcon />
                     </IconButton>
-                    <ConfirmActionDialog title="Confirm Deletion!" message="you sure you want to delete this?"/>
+                    <ConfirmActionDialog  title="Confirm Deletion!" message="you sure you want to delete this?"/>
                 </Box>
             </AppBar>
             <Wishlist/>

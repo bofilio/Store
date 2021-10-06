@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDispatch } from 'react-redux';
+
 import { useHistory } from 'react-router';
 import { Box } from '@mui/system'
 import { IconButton } from '@mui/material'
@@ -8,6 +8,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import { Typography } from '@mui/material'
 import DeleteIcon from '@mui/icons-material/Delete';
 import NotificationsList from '../content-box/notifications/NotificationsList';
+import { useDispatch } from 'react-redux';
 import ConfirmActionDialog from '../toolsBox/ConfirmActionDialog';
 import { bindActionCreators } from 'redux';
 import { navActionCreators } from '../../state/ui/action-creators';
