@@ -8,7 +8,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import { Typography } from '@mui/material'
 import DeleteIcon from '@mui/icons-material/Delete';
 import Wishlist from '../content-box/wishlist/Wishlist';
-import { navActionCreators } from '../../state/ui/action-creators';
+import { uiActionCreators } from '../../state/ui/action-creators';
 import { bindActionCreators } from 'redux';
 import ConfirmActionDialog from '../toolsBox/ConfirmActionDialog';
 
@@ -17,7 +17,7 @@ import ConfirmActionDialog from '../toolsBox/ConfirmActionDialog';
 const WishlistPage = () => {
     const history = useHistory()
     const dispatch = useDispatch();
-    const {toggleDeleteDialog} = bindActionCreators(navActionCreators, dispatch);
+    const {toggleDeleteDialog} = bindActionCreators(uiActionCreators, dispatch);
     
     return (
         <div >

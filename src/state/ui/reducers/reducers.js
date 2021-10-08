@@ -11,3 +11,9 @@ export const DeleteDialogReducer=(state=false,action)=>{
         default: return state;
     }
 }
+export const ThemeModeReducer=(state='light',action)=>{
+    switch(action.type){
+        case "toggle_theme_mode":return action.payload;
+        default: return state;
+    }
+}

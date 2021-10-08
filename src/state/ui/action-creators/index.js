@@ -1,1 +1,1 @@
-export * as navActionCreators from './actionCreators'
+export * as uiActionCreators from './actionCreators'

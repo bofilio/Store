@@ -12,11 +12,11 @@ import Button from '@mui/material/Button';
 import { useDispatch } from 'react-redux';
 import ConfirmActionDialog from '../toolsBox/ConfirmActionDialog';
 import { bindActionCreators } from 'redux';
-import { navActionCreators } from '../../state/ui/action-creators';
+import { uiActionCreators } from '../../state/ui/action-creators';
 const CartPage = () => {
     const history = useHistory();
     const dispatch = useDispatch();
-    const { toggleDeleteDialog } = bindActionCreators(navActionCreators, dispatch);
+    const { toggleDeleteDialog } = bindActionCreators(uiActionCreators, dispatch);
     return (
         <div >
             <AppBar position="static">

@@ -7,6 +7,7 @@ import { Autocomplete } from '@mui/material';
 import { TextField } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+import SearchInput from '../toolsBox/SearchInput';
 
 const SearchPage = () => {
     
@@ -28,24 +29,8 @@ const SearchPage = () => {
                     <IconButton size="large" edge="start" color="inherit" aria-label="open drawer" onClick={() => { history.goBack() }}>
                         <ArrowBackIcon />
                     </IconButton>
-                    <Box sx={{ flexGrow: 1}} >
-                        <Autocomplete freeSolo id="free-solo-2-demo" disableClearable sx={{alignItems:"center"}}
-                            options={products.map((option) => option.title)}
-                            renderInput={(params) => (
-                                <TextField {...params} label="Search input" style={{ border: '0' }}
-                                    InputProps={{
-                                        ...params.InputProps,
-                                        type: 'search',
-                                        
-                                    }}
-                                />
-                            )}
-                        />
-                    </Box>
-                   
-                    <IconButton size="large" aria-label="search" color="inherit">
-                        <DeleteIcon />
-                    </IconButton>
+                    <Box sx={{flexGrow:1}}></Box>
+                    <SearchInput sx={{width:"100%"}}/>
                 </Box>
             </AppBar>
             <Box component="div" p={1} sx={{backgroundColor:"white",color:"#777"}}> Category: cat</Box>

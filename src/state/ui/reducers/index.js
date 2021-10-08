@@ -1,9 +1,10 @@
 import { combineReducers } from "redux";
-import {DrawerReducer,DeleteDialogReducer} from './reducers'
+import {DrawerReducer,DeleteDialogReducer, ThemeModeReducer} from './reducers'
 
 const reducers=combineReducers({
     opened:DrawerReducer,
     opened_dialog:DeleteDialogReducer,
+    mode:ThemeModeReducer,
 });
 
 export default reducers;

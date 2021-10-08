@@ -14,3 +14,11 @@ export const toggleDeleteDialog=(value)=>{
         })
     }
 }
+export const toggleThemeMode=(value)=>{
+    return (dispatch)=>{
+        dispatch({
+            type:"toggle_theme_mode",
+            payload:value
+        })
+    }
+}

@@ -6,13 +6,13 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { useDispatch,useSelector } from 'react-redux';
-import { navActionCreators } from '../../state/ui/action-creators';
+import { uiActionCreators } from '../../state/ui/action-creators';
 import { bindActionCreators } from 'redux';
 const ConfirmActionDialog = ({ title,message}) => {
     const opened = useSelector(state => state.nav.opened_dialog)
     console.log(opened)
     const dispatch = useDispatch();
-    const { toggleDeleteDialog } = bindActionCreators(navActionCreators, dispatch);
+    const { toggleDeleteDialog } = bindActionCreators(uiActionCreators, dispatch);
    
     
     const handleConfirm=()=>{

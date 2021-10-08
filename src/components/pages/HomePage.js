@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBare from '../nav-box/NavBar'
-import TemporaryDrawer from '../nav-box/Drawer'
+import SideBar from '../nav-box/SideBar'
 import CategoriesList from '../content-box/categories/CategoriesList'
 import Carosel from '../content-box/news/NewsCarosel';
 import Hspace from '../toolsBox/Hspace'
@@ -11,8 +11,8 @@ const Home = () => {
 
     return (
         <div style={{ height: '100%', width: '100%' }}>
-            <NavBare />
-            <TemporaryDrawer />
+            <NavBare/>
+            <SideBar />
             <Hspace mt={4} />
             <span>News</span>
             <Box p={1} mr={1} ml={1}>
