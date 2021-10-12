@@ -2,13 +2,11 @@ import * as React from 'react';
 import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { uiActionCreators } from '../../state/ui/action-creators';
-import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchInput from '../toolsBox/SearchInput'
 

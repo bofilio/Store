@@ -13,7 +13,7 @@ import SearchPage from './pages/SearchPage';
 import NotificationPage from './pages/NotificationPage';
 import InstructionsPage from './pages/InstructionsPage';
 import { ThemeProvider } from '@emotion/react';
-import { base_theme, light_theme, dark_theme } from '../theme';
+import { light_theme, dark_theme } from '../theme';
 import { styled } from '@mui/system';
 
 const AppWraper = styled('div')(({ theme }) => ({

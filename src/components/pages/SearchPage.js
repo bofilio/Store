@@ -3,9 +3,6 @@ import { useHistory } from 'react-router';
 import { Box } from '@mui/system'
 import { AppBar } from '@mui/material';
 import { IconButton } from '@mui/material';
-import { Autocomplete } from '@mui/material';
-import { TextField } from '@mui/material';
-import DeleteIcon from '@mui/icons-material/Delete';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import SearchInput from '../toolsBox/SearchInput';
 
